@@ -1,4 +1,4 @@
-@import url('');
+			@import url('');
 /*css reset*/
 			html, body, div, span, applet, object, iframe,
 			h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -60,38 +60,61 @@
 		padding:  32px 20;	
 	}
 
-.menu {
-	margin: 32px 32px ;
-	padding: 0;
-	border: 0;
-	font: inherit;
+
+.menu-block {
+    position: relative;
 }
-ul{
+
+.menu-block ul{
 	text-align: center;
 	font-size: 0;
 }
-ul li{
+.menu-block ul li{
 	display: inline-block;
 	background: #ffe3f0;
-	font-size: 18px;
-}
-ul li a{
-	text-decoration: none;
-	color: black;
-	text-transform: uppercase;
-	padding: 15px 25px;
-	display: block;
-}
-ul li a:hover {
-    background-color: #ffe3f0;
-    font-size: larger;
-    font-style: inherit;
-    font-weight: bolder;
-}
-li+li{
-    border-left: 2px solid #ffffff;
+	font-size: 16px;
+    position: relative;
+    width: 148px;
 }
 
+.menu-block ul li a{
+	text-decoration: none;
+	color: #313131;
+	padding-top: 12px;
+    padding-bottom: 12px;
+	display: block;
+    text-align: center;
+}
+ .menu-block ul li a:hover {
+    background-color: #e9bbc8;
+}
+
+.menu-block li{
+    border: 1px solid #ffffff;
+}
+
+.in-menu-block {
+    position: absolute;
+    display: none;
+}
+.float-menu {
+    position: absolute;
+    top:  100%;
+    left:  0;
+    display: none;
+}
+
+li:hover .in-menu-block  {
+    display: block;
+    top:  100%;
+    left:  0%;
+}
+
+li ul  :hover  .float-menu   {
+    display: block;
+    top:  0;
+    left:  100%;
+}
 
 
 
@@ -126,7 +149,7 @@ display: flex;
 
 
 .second{
-background: #e9bbc8;
+background: #def3ff;
 display: flex;
 }
 .second_left{
@@ -156,7 +179,7 @@ display: flex;
 }
 
 .three{
-background: #a36452;
+background: #f4bf3c;
 display: flex;
 height: 200px;
 }
@@ -185,7 +208,7 @@ height: 100px;
 
 .four{
 display: flex;
-background: #B5AAD5;
+background: #f8955b;
 height: 300px;
 }
 
@@ -753,21 +776,18 @@ background:#f4bf3c;
 }
 
 
-
-
 .wrapper1{
 	display: flex;
 	flex-wrap: wrap;
-	width:1200px;	
+	width:1200px;
+	z-index: -70;	
 	}
-.border1{
-	padding: 12px;
-}
+
 .image1{
+	z-index: -20;
 	position: relative;
-}
-.opacity1{
 	opacity:0.8;
+	padding: 12px;
 }
 
 .text1 {
@@ -779,3 +799,4 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 }
+
